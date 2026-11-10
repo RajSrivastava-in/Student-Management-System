@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>StudentMS</h2>
+
+        <ul>
+            <li>Dashboard</li>
+            <li>Add Student</li>
+            <li>Student List</li>
+            <li>Settings</li>
+        </ul>
+    </div>
+
+    <div class="main">
+
+        <header>
+            <h1>Student Management System</h1>
+            <p>Welcome, Admin!</p>
+        </header>
+
+        <section class="cards">
+
+            <div class="card">
+                <h3>Total Students</h3>
+                <h2 id="totalStudents">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Total Courses</h3>
+                <h2>4</h2>
+            </div>
+
+        </section>
+
+        <section class="form-section">
+
+            <h2>Add New Student</h2>
+
+            <form id="studentForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Student Name"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="roll"
+                    placeholder="Roll Number"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email Address"
+                    required
+                >
+
+                <select id="course" required>
+                    <option value="">Select Course</option>
+                    <option value="BCA">BCA</option>
+                    <option value="BBA">BBA</option>
+                    <option value="B.Tech">B.Tech</option>
+                    <option value="MCA">MCA</option>
+                    <option value="BSC">BSC</option>
+                </select>
+
+                <button type="submit">Add Student</button>
+
+            </form>
+
+        </section>
+
+        <section class="table-section">
+
+            <h2>Student Records</h2>
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search student..."
+            >
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Roll No.</th>
+                        <th>Email</th>
+                        <th>Course</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentTable">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
